@@ -14,3 +14,9 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+
+    def url_contain(self, what):
+        if self.browser.current_url.find(what) == -1:
+            return False
+        else:
+            return True
